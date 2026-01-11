@@ -351,11 +351,92 @@ body {
   flex-shrink: 0;
 }
 
+.skill-item.html svg {
+  color: #e34f26;
+}
+
+.skill-item.css svg {
+  color: #264de4;
+}
+
+.skill-item.js svg {
+  color: #f0db4f;
+}
+
+.skill-item.react svg {
+  color: #61dafb;
+}
+
+.skill-item.nextjs svg {
+  color: #000000;
+}
+
+.skill-item.github svg {
+  color: #181717;
+}
+
+.skill-item.reacthookform svg {
+  color: #ff4785;
+}
+
+.skill-item.vercel svg {
+  color: #000000;
+}
+
+.skill-item.typescript svg {
+  color: #3178c6;
+}
+
+.skill-item.tailwind svg {
+  color: #38bdf8;
+}
+
+.skill-item.vite svg {
+  color: #646cff;
+}
+
+.skill-item.figma svg {
+  color: #f24e1e;
+}
+
+.skill-item.vscode svg {
+  color: #0078d7;
+}
+
+.skill-item.jest svg {
+  color: #c21325;
+}
+
+.skill-item.firebase svg {
+  color: #ffca28;
+}
+
+.skill-item.reactquery svg {
+  color: #ff4785;
+}
+
+.skill-item.stripe svg {
+  color: #6772e5;
+}
+
+.skill-item.testinglibrary svg {
+  color: #e33371;
+}
+
+.skill-item.git svg {
+  color: #f1502f;
+}
+
 .skill-item span {
   font-size: 0.95rem;
   color: #f5f5f7;
   letter-spacing: 0.2px;
 }
+
+.skill-item:hover svg {
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
 
 /* Projects Section */
 
@@ -613,7 +694,7 @@ body {
   border-top: 1px solid var(--card-border);
 }
 
-/* Hero Media Queries */
+/* Media Queries */
 
 @media (max-width: 1024px) {
   .hero-container {
@@ -637,8 +718,20 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .hero-image-container {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

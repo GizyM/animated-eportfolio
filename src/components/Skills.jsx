@@ -5,10 +5,25 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaReact,
-  FaNodeJs,
+  FaGithub,
   FaGitAlt,
 } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiFirebase,
+  SiReactquery,
+  SiReacthookform,
+  SiVercel,
+  SiVite,
+  SiFigma,
+  SiJest,
+  SiStripe,
+  SiTestinglibrary,
+} from "react-icons/si";
+
+import { VscCode } from "react-icons/vsc";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -49,48 +64,98 @@ export const Skills = () => {
           </motion.p>
           <div className="skills-display">
             <div className="skills-grid">
-              <div className="skill-item">
+              <div className="skill-item html">
                 <FaHtml5 aria-hidden="true" />
                 <span>HTML</span>
               </div>
 
-              <div className="skill-item">
-                <FaCss3Alt aria-hidden="true" />
+              <div className="skill-item css">
+                <FaCss3Alt />
                 <span>CSS</span>
               </div>
 
-              <div className="skill-item">
-                <FaJsSquare aria-hidden="true" />
+              <div className="skill-item js">
+                <FaJsSquare />
                 <span>JavaScript</span>
               </div>
 
-              <div className="skill-item">
-                <FaReact aria-hidden="true" />
+              <div className="skill-item react">
+                <FaReact />
                 <span>React</span>
               </div>
 
-              <div className="skill-item">
-                <SiNextdotjs aria-hidden="true" />
+              <div className="skill-item nextjs">
+                <SiNextdotjs />
                 <span>Next.js</span>
               </div>
 
-              <div className="skill-item">
-                <SiTypescript aria-hidden="true" />
+              <div className="skill-item typescript">
+                <SiTypescript />
                 <span>TypeScript</span>
               </div>
 
-              <div className="skill-item">
-                <SiTailwindcss aria-hidden="true" />
+              <div className="skill-item tailwind">
+                <SiTailwindcss />
                 <span>Tailwind CSS</span>
               </div>
 
-              <div className="skill-item">
-                <FaNodeJs aria-hidden="true" />
-                <span>Node.js</span>
+              <div className="skill-item github">
+                <FaGithub />
+                <span>Github</span>
               </div>
 
-              <div className="skill-item">
-                <FaGitAlt aria-hidden="true" />
+              <div className="skill-item firebase">
+                <SiFirebase />
+                <span>Firebase</span>
+              </div>
+
+              <div className="skill-item reactquery">
+                <SiReactquery />
+                <span>React Query</span>
+              </div>
+
+              <div className="skill-item reacthookform">
+                <SiReacthookform />
+                <span>React Hook Form</span>
+              </div>
+
+              <div className="skill-item vercel">
+                <SiVercel />
+                <span>Vercel</span>
+              </div>
+
+              <div className="skill-item vite">
+                <SiVite />
+                <span>Vite</span>
+              </div>
+
+              <div className="skill-item figma">
+                <SiFigma />
+                <span>Figma</span>
+              </div>
+
+              <div className="skill-item vscode">
+                <VscCode />
+                <span>VS Code</span>
+              </div>
+
+              <div className="skill-item jest">
+                <SiJest />
+                <span>Jest</span>
+              </div>
+
+              <div className="skill-item stripe">
+                <SiStripe />
+                <span>Stripe</span>
+              </div>
+
+              <div className="skill-item testinglibrary">
+                <SiTestinglibrary />
+                <span>Testing Library</span>
+              </div>
+
+              <div className="skill-item git">
+                <FaGitAlt />
                 <span>Git</span>
               </div>
             </div>
