@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -67,7 +68,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Me
+              My Resume
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
@@ -107,9 +108,9 @@ export const Hero = () => {
   codename: "GizyM", "CaffeineFueledCoder is also an acceptable title",
   origin: "🌍 Where my brain meets code and the terminal never sleeps",
   role: "Fullstack Web Developer",
-  stack: {
-    languages: ["JavaScript", "TypeScript", "HTML", "CSS"],
-    frameworks: ["React", "Next.js", "TailwindCSS", "Firebase"],
+  focus: {
+    experience: ["Responsive Design", "Accessibility", 
+    "Performance Optimization"],
   },
   traits: [
     "flexible problem solver",
