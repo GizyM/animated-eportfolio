@@ -6,6 +6,7 @@ import NetflixClone from "../assets/NetflixClone.png";
 import NFTInternship from "../assets/NFT Internship.png";
 import Skinstric from "../assets/Skinstric.png";
 import Treact from "../assets/Treact.png";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -77,6 +78,26 @@ export const Projects = () => {
             <span>CSS</span>
             <span>JavaScript</span>
           </div>
+
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/Movie-Api-React"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -101,6 +122,26 @@ export const Projects = () => {
             <span>React</span>
             <span>CSS</span>
             <span>JavaScript</span>
+          </div>
+
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/Library-React"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
           </div>
         </motion.div>
 
@@ -128,6 +169,26 @@ export const Projects = () => {
             <span>Firebase</span>
             <span>JavaScript</span>
           </div>
+
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/Netflix-Clone"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -154,6 +215,25 @@ export const Projects = () => {
             <span>AOS</span>
             <span>Owl Carousel</span>
           </div>
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/NFT-Internship"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -178,6 +258,25 @@ export const Projects = () => {
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
+          </div>
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/Treact-Project"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
           </div>
         </motion.div>
 
@@ -204,6 +303,25 @@ export const Projects = () => {
             <span>React</span>
             <span>CSS</span>
             <span>JavaScript</span>
+          </div>
+          <div className="project-actions">
+            <a
+              href="https://github.com/GizyM/Skinstric-AI"
+              target="_blank"
+              className="project-link github"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://your-live-demo-url.com"
+              target="_blank"
+              className="project-link demo"
+            >
+              <FaExternalLinkAlt aria-hidden="true" />
+              <span>Live Demo</span>
+            </a>
           </div>
         </motion.div>
       </motion.div>

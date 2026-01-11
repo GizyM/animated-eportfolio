@@ -71,15 +71,68 @@ export const Hero = () => {
               My Resume
             </motion.a>
           </motion.div>
+
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com" target="_blank">
+            <motion.a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
               <i className="fab fa-github"></i>
+              <motion.span
+                className="social-tooltip"
+                variants={{
+                  rest: { opacity: 0, y: 6 },
+                  hover: { opacity: 1, y: 0 },
+                }}
+              >
+                GitHub
+              </motion.span>
             </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank">
+
+            <motion.a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
               <i className="fab fa-linkedin"></i>
+              <motion.span
+                className="social-tooltip"
+                variants={{
+                  rest: { opacity: 0, y: 6 },
+                  hover: { opacity: 1, y: 0 },
+                }}
+              >
+                LinkedIn
+              </motion.span>
             </motion.a>
-            <motion.a target="_blank">
+
+            <motion.a
+              href="/resume.pdf"
+              target="_blank"
+              className="social-link"
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
               <i className="fa-solid fa-file-arrow-down"></i>
+              <motion.span
+                className="social-tooltip"
+                variants={{
+                  rest: { opacity: 0, y: 6 },
+                  hover: { opacity: 1, y: 0 },
+                }}
+              >
+                Download Resume
+              </motion.span>
             </motion.a>
           </motion.div>
         </motion.div>
