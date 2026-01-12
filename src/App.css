@@ -122,12 +122,56 @@ body {
   margin: 0 auto;
   width: 100%;
   padding-top: 100px;
+  position: relative;
+  z-index: 1;
 }
+
+.butterflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.butterfly {
+  position: absolute;
+  transform-origin: center;
+  animation: flap 0.6s infinite ease-in-out;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
+  user-select: none;
+}
+
+.butterfly:nth-child(odd) { animation-duration: 0.55s; }
+.butterfly:nth-child(even) { animation-duration: 0.7s; }
+
+@keyframes flap {
+  0%   { transform: scaleX(1) rotate(0deg); }
+  25%  { transform: scaleX(0.7) rotate(-6deg); }
+  50%  { transform: scaleX(1.15) rotate(6deg); }
+  75%  { transform: scaleX(0.75) rotate(-4deg); }
+  100% { transform: scaleX(1) rotate(0deg); }
+}
+
+.butterfly.b1 { left: -4%;  top: 14%; font-size: 1.6rem; }
+.butterfly.b2 { left: 12%; top: 48%; font-size: 1.2rem; }
+.butterfly.b3 { left: 22%; top: 72%; font-size: 1.5rem; }
+.butterfly.b4 { left: 36%; top: 18%; font-size: 1.3rem; }
+.butterfly.b5 { left: 38%; top: 78%; font-size: 1.8rem; }
+.butterfly.b6 { left: 45%; top: 33%; font-size: 1.3rem; }
+.butterfly.b7 { left: 100%; top: 56%; font-size: 1.6rem; }
+.butterfly.b8 { left: 100%; top: 16%; font-size: 1.2rem; }
+.butterfly.b9 { left: 75%; top: 90%; font-size: 1.5rem; }
 
 .hero-content {
   flex: 1;
   text-align: left;
   max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content,
+.hero-image-container {
   position: relative;
   z-index: 2;
 }
@@ -320,6 +364,59 @@ body {
 
 .code-display {
   width: 100%;
+}
+
+.mail-button {
+  position: fixed;
+  right: 24px;
+  top: 630px;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  animation: mailFloat 4s ease-in-out infinite;
+  transition:
+  background 0.35s ease,
+  box-shadow 0.35s ease,
+  transform 0.2s ease;
+}
+
+.mail-button svg {
+  font-size: 1.2rem;
+}
+
+.mail-button:hover svg {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+}
+
+.mail-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--secondary-color)
+  );
+  box-shadow: 0 12px 36px rgba(244, 194, 107, 0.45);
+  transform: translateY(-10px);
+}
+
+@keyframes mailFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Skills Section */
@@ -785,7 +882,75 @@ body {
   border-top: 1px solid var(--card-border);
 }
 
+/* Contact Modal */
+
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.contact-modal {
+  width: min(640px, 100%);
+  border-radius: 18px;
+  background: rgba(27, 15, 46, 0.92);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  padding: 22px;
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.contact-modal-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.contact-modal-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-modal-close:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.contact-modal .contact-form input,
+.contact-modal .contact-form textarea {
+  width: 100%;
+}
+
 /* Media Queries */
+
+@media (prefers-reduced-motion: reduce) {
+  .butterfly {
+    animation: none;
+  }
+  .mail-button {
+    animation: none;
+  }
+}
 
 @media (max-width: 1024px) {
   .hero-container {

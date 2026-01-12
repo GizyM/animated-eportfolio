@@ -27,6 +27,18 @@ export const Hero = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="hero-container">
+          <div className="butterflies">
+          <span className="butterfly b1">🦋</span>
+          <span className="butterfly b2">🦋</span>
+          <span className="butterfly b3">🦋</span>
+          <span className="butterfly b4">🦋</span>
+          <span className="butterfly b5">🦋</span>
+          <span className="butterfly b6">🦋</span>
+          <span className="butterfly b7">🦋</span>
+          <span className="butterfly b8">🦋</span>
+          <span className="butterfly b9">🦋</span>
+        </div>
+
         <motion.div
           className="hero-content"
           variants={staggerContainer}

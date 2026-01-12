@@ -85,7 +85,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -94,7 +94,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
@@ -115,8 +115,9 @@ export const Projects = () => {
           />
           <h3>Library React</h3>
           <p>
-            A React e-commerce book store with dynamic routing, sorting, and
-            real-time cart updates.
+            A React e-commerce book store with interactivity, sorting, and
+            real-time cart updates. Implements dynamic routing with React Router,
+            allowing each book to have its own dedicated product page.
           </p>
           <div className="project-tech">
             <span>React</span>
@@ -130,7 +131,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -139,7 +140,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
@@ -176,7 +177,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -185,7 +186,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
@@ -221,7 +222,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -230,7 +231,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
@@ -265,7 +266,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -274,7 +275,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
@@ -310,7 +311,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link github"
             >
-              <FaGithub aria-hidden="true" />
+              <FaGithub />
               <span>View GitHub</span>
             </a>
 
@@ -319,7 +320,7 @@ export const Projects = () => {
               target="_blank"
               className="project-link demo"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
+              <FaExternalLinkAlt />
               <span>Live Demo</span>
             </a>
           </div>
