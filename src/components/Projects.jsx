@@ -90,7 +90,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://movie-api-react-eta.vercel.app/"
               target="_blank"
               className="project-link demo"
             >
@@ -136,7 +136,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://library-react-wine.vercel.app/"
               target="_blank"
               className="project-link demo"
             >
@@ -182,7 +182,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://netflix-clone-virid-one-78.vercel.app/"
               target="_blank"
               className="project-link demo"
             >
@@ -218,7 +218,7 @@ export const Projects = () => {
           </div>
           <div className="project-actions">
             <a
-              href="https://github.com/GizyM/NFT-Internship"
+              href="https://github.com/GizyM/Gizy-Internship"
               target="_blank"
               className="project-link github"
             >
@@ -227,7 +227,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://gizy-internship.vercel.app/"
               target="_blank"
               className="project-link demo"
             >
@@ -271,7 +271,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://treact-project-ten.vercel.app/"
               target="_blank"
               className="project-link demo"
             >
@@ -316,7 +316,7 @@ export const Projects = () => {
             </a>
 
             <a
-              href="https://your-live-demo-url.com"
+              href="https://skinstric-ai-eight.vercel.app/"
               target="_blank"
               className="project-link demo"
             >

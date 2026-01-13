@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import logoImage from "../assets/a7940d9cdb124e3eb3c89bfad71b01a5-free.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -28,7 +29,12 @@ export const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Portfolio
+        <img 
+          src={logoImage} 
+          alt="Portfolio logo"
+          className="logo-image"
+        />
+        <span>Portfolio</span>
       </motion.div>
 
       <motion.ul

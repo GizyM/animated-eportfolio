@@ -75,7 +75,8 @@ export const Hero = () => {
               View My Work
             </motion.a>
             <motion.a
-              href="#contact"
+              href="/resume.pdf"
+              target="_blank"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -86,7 +87,7 @@ export const Hero = () => {
 
           <motion.div className="social-links" variants={staggerContainer}>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/GizyM"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -107,7 +108,7 @@ export const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/gizy-michel-8268033a2"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -129,7 +130,7 @@ export const Hero = () => {
 
             <motion.a
               href="/resume.pdf"
-              target="_blank"
+              download
               className="social-link"
               whileHover="hover"
               initial="rest"

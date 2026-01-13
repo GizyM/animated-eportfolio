@@ -32,6 +32,7 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   width: 100%;
   min-height: 100vh;
+  min-width: 75vh;
 }
 
 .app.loaded {
@@ -53,6 +54,7 @@ body {
   z-index: 1000;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.21);
   border-bottom: 4px solid var(--card-border);
+  gap: 16px;
 }
 
 .logo {
@@ -60,6 +62,19 @@ body {
   font-weight: 700;
   color: var(--primary-dark);
   text-shadow: 0 0 10px rgba(224, 114, 182, 0.3);
+  align-items: center;
+  display: flex;
+}
+
+.logo-image {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.logo:hover .logo-image {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
 
 .nav-links {
@@ -67,6 +82,7 @@ body {
   gap: 2rem;
   list-style-type: none;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -187,6 +203,8 @@ body {
 }
 
 .glitch {
+  font-family: "Corinthia", cursive;
+  font-style: normal;
   font-size: 4.5rem;
   font-weight: 800;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -380,7 +398,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 1000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   animation: mailFloat 4s ease-in-out infinite;
   transition:
@@ -501,7 +519,7 @@ body {
 }
 
 .skill-item.nextjs svg {
-  color: #000000;
+  color: #fff;
 }
 
 .skill-item.github svg {
@@ -897,12 +915,19 @@ body {
 }
 
 .contact-modal {
-  width: min(640px, 100%);
   border-radius: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background: rgba(27, 15, 46, 0.92);
   border: 1px solid var(--card-border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   padding: 22px;
+  max-width: 1100px;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-modal-header {
@@ -978,6 +1003,15 @@ body {
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .navbar {
+    padding: 1rem 4%;
+  }
+  .navbar {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -986,8 +1020,29 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.9rem 4%;
+  }
+  .nav-links {
+    gap: 0.75rem;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 500px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links {
+    gap: 0.6rem;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
   }
 }

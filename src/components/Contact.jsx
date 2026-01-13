@@ -1,8 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useState, useRef, useEffect } from "react";
-import { FaEnvelope, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -19,9 +18,6 @@ const staggerContainer = {
 };
 
 export const Contact = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef(null);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,30 +30,6 @@ export const Contact = () => {
     error: false,
     message: "",
   });
-
-  const openModal = () => {
-    setIsOpen(true);
-    setFormStatus({
-      submitting: false,
-      success: false,
-      error: false,
-      message: "",
-    });
-  };
-
-  const closeModal = () => {
-    if (formStatus.submitting) return;
-    setIsOpen(false);
-  };
-
-   useEffect(() => {
-    const onKeyDown = (e) => {
-      if (e.key === "Escape") closeModal();
-    };
-    if (isOpen) window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen, formStatus.submitting]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -113,117 +85,6 @@ export const Contact = () => {
 
   return (
     <>
-   <motion.button
-        type="button"
-        className="mail-button"
-        onClick={openModal}
-        whileHover={{ scale: 1.06 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <FaEnvelope />
-      </motion.button>
-
-       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="contact-modal-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onMouseDown={(e) => {
-              // close when clicking outside the modal panel
-              if (e.target === e.currentTarget) closeModal();
-            }}
-          >
-            <motion.div
-              ref={modalRef}
-              className="contact-modal"
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby="contact-modal-title"
-              initial={{ opacity: 0, y: 16, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 16, scale: 0.98 }}
-              transition={{ duration: 0.18 }}
-            >
-              <div className="contact-modal-header">
-                <motion.h2
-                  id="contact-modal-title"
-                  variants={fadeInUp}
-                  initial="initial"
-                  animate="animate"
-                >
-                  Get in Touch
-                </motion.h2>
-
-                <motion.button
-                  type="button"
-                  className="contact-modal-close"
-                  onClick={closeModal}
-                  aria-label="Close contact form"
-                  whileHover={{ scale: 1.06 }}
-                  whileTap={{ scale: 0.95 }}
-                  disabled={formStatus.submitting}
-                >
-                  <FaTimes aria-hidden="true" />
-                </motion.button>
-              </div>
-
-              <motion.form className="contact-form" onSubmit={handleSubmit}>
-                <motion.input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name..."
-                  required
-                  value={formData.name}
-                  whileFocus={{ scale: 1.02 }}
-                  onChange={handleInputChange}
-                />
-                <motion.input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email..."
-                  required
-                  value={formData.email}
-                  whileFocus={{ scale: 1.02 }}
-                  onChange={handleInputChange}
-                />
-                <motion.textarea
-                  name="message"
-                  placeholder="Your Message..."
-                  required
-                  value={formData.message}
-                  whileFocus={{ scale: 1.02 }}
-                  onChange={handleInputChange}
-                />
-
-                <motion.button
-                  className="submit-btn"
-                  type="submit"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  disabled={formStatus.submitting}
-                >
-                  {formStatus.submitting
-                    ? "Sending..."
-                    : "Send it to me and enjoy a good cup of coffee ☕"}
-                </motion.button>
-
-                {formStatus.message && (
-                  <motion.div
-                    className={`form-status ${
-                      formStatus.success ? "success" : "error"
-                    }`}
-                  >
-                    {formStatus.message}
-                  </motion.div>
-                )}
-              </motion.form>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <motion.section
         id="contact"
         className="contact"
