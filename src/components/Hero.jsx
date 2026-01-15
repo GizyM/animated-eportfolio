@@ -75,7 +75,7 @@ export const Hero = () => {
               View My Work
             </motion.a>
             <motion.a
-              href="public/Gizy Michel Resume.docx.pdf"
+              href="/resume.pdf"
               target="_blank"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
@@ -129,7 +129,7 @@ export const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="public/Gizy Michel Resume.docx.pdf"
+              href="/resume.pdf"
               download
               className="social-link"
               whileHover="hover"
