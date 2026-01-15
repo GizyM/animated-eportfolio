@@ -1,5 +1,5 @@
 //eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import "./App.css";
 import { Navbar } from "./components/Navbar.jsx";
 import { Skills } from "./components/Skills.jsx";
@@ -18,6 +18,7 @@ function App() {
   }, []);
 
   return (
+    <>
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
 
@@ -35,6 +36,7 @@ function App() {
         <p>© 2026 Gizy Michel. All rights reserved.</p>
       </motion.footer>
     </div>
+    </>
   );
 }
 

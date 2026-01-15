@@ -24,6 +24,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background: var(--background);
+  max-width: 100%;
 }
 
 .app {
@@ -382,29 +383,6 @@ body {
 
 .code-display {
   width: 100%;
-}
-
-.mail-button {
-  position: fixed;
-  right: 24px;
-  top: 630px;
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  animation: mailFloat 4s ease-in-out infinite;
-  transition:
-  background 0.35s ease,
-  box-shadow 0.35s ease,
-  transform 0.2s ease;
 }
 
 .mail-button svg {
@@ -898,72 +876,6 @@ body {
   background: var(--background);
   color: var(--text-color);
   border-top: 1px solid var(--card-border);
-}
-
-/* Contact Modal */
-
-.contact-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 10000;
-}
-
-.contact-modal {
-  border-radius: 18px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(27, 15, 46, 0.92);
-  border: 1px solid var(--card-border);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  padding: 22px;
-  max-width: 1100px;
-  width: 90%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.contact-modal-header h2 {
-  margin: 0;
-  font-size: 1.6rem;
-}
-
-.contact-modal-close {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-color);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-modal-close:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.contact-modal .contact-form input,
-.contact-modal .contact-form textarea {
-  width: 100%;
 }
 
 /* Media Queries */
