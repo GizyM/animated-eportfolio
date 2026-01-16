@@ -59,7 +59,7 @@ export const Hero = () => {
             Frontend Software Developer & Designer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I'm a 27-year-old American frontend software engineer with a strong
+            I'm a 26-year-old American frontend software engineer with a strong
             passion for building modern, user-focused web interfaces. I thrive
             on tackling complex frontend challenges while continuously learning
             from highly skilled and experienced engineers.
