@@ -222,6 +222,44 @@ body {
   position: relative;
   margin-bottom: 1rem;
   line-height: 1.1;
+  position: relative;
+}
+
+.glitch-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glitch-sparkles .sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff, #f5c26b, #ff5fa2);
+  opacity: 0;
+  animation: sparkleTwinkle 3.5s infinite ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+}
+
+.glitch-sparkles .sparkle:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.glitch-sparkles .sparkle:nth-child(2) { top: 30%; left: 66%; animation-delay: 1s; }
+.glitch-sparkles .sparkle:nth-child(3) { top: 55%; left: 10%; animation-delay: 2s; }
+.glitch-sparkles .sparkle:nth-child(4) { top: 75%; left: 40%; animation-delay: 1.5s; }
+.glitch-sparkles .sparkle:nth-child(5) { top: 15%; left: 55%; animation-delay: 0.8s; }
+.glitch-sparkles .sparkle:nth-child(6) { top: 45%; left: 65%; animation-delay: 2.3s; }
+.glitch-sparkles .sparkle:nth-child(7) { top: 85%; left: 20%; animation-delay: 1.8s; }
+.glitch-sparkles .sparkle:nth-child(8) { top: 65%; left: 65%; animation-delay: 0.4s; }
+.glitch-sparkles .sparkle:nth-child(9) { top: 5%; left: 20%; animation-delay: 2.7s; }
+.glitch-sparkles .sparkle:nth-child(10) { top: 80%; left: 60%; animation-delay: 1.2s; }
+.glitch-sparkles .sparkle:nth-child(11) { top: 35%; left: 45%; animation-delay: 2.1s; }
+.glitch-sparkles .sparkle:nth-child(12) { top: 60%; left: 5%; animation-delay: 0.6s; }
+
+@keyframes sparkleTwinkle {
+  0% { opacity: 0; transform: scale(0.4); }
+  40% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.9); }
+  100% { opacity: 0; transform: scale(0.4); }
 }
 
 .hero-subtitle {
@@ -894,8 +932,9 @@ body {
   .butterfly {
     animation: none;
   }
-  .mail-button {
+  .sparkle {
     animation: none;
+    opacity: 0.4;
   }
 }
 

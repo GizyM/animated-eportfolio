@@ -54,6 +54,11 @@ export const Hero = () => {
             whileHover={{ scale: 1.02 }}
           >
             Gizy Michel
+            <span className="glitch-sparkles">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <span key={i} className="sparkle" />
+              ))}
+            </span>
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             Frontend Software Developer & Designer
