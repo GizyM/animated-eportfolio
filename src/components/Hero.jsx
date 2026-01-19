@@ -55,7 +55,7 @@ export const Hero = () => {
           >
             Gizy Michel
             <span className="glitch-sparkles">
-              {Array.from({ length: 12 }).map((_, i) => (
+              {Array.from({ length: 24 }).map((_, i) => (
                 <span key={i} className="sparkle" />
               ))}
             </span>
