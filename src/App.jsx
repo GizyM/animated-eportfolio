@@ -34,6 +34,20 @@ function App() {
         transition={{ duration: 0.6 }}
       >
         <p>© 2026 Gizy Michel. All rights reserved.</p>
+        <div className="footer-links">
+          <a
+          href="https://github.com/GizyM"
+          target="_blank"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+          href="https://www.linkedin.com/in/gizy-michel-8268033a2"
+          target="_blank"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+        </div>
       </motion.footer>
     </div>
     </>
