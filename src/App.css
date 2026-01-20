@@ -442,7 +442,7 @@ body {
 
 .code-display {
   width: 100%;
-  animation: terminalFlicker 10s infinite;
+  animation: terminalFlicker 5s infinite;
 }
 
 @keyframes terminalFlicker {
