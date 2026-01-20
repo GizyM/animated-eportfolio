@@ -442,22 +442,6 @@ body {
 
 .code-display {
   width: 100%;
-  animation: terminalFlicker 5s infinite;
-}
-
-@keyframes terminalFlicker {
-  0%, 92%, 100% { 
-    opacity: 1;
-  }
-  93% {
-    opacity: 0.95;
-  }
-  94% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 0.97;
-  }
 }
 
 /* Skills Section */

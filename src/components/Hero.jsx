@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useEffect, useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -18,6 +19,41 @@ const staggerContainer = {
 };
 
 export const Hero = () => {
+  const aboutMeCode = `const aboutMe: DeveloperProfile = {
+  codename: "GizyM", "CaffeineFueledCoder is also an acceptable title",
+  origin: "🌍 Where my brain meets code and the terminal never sleeps",
+  role: "Fullstack Web Developer",
+  focus: {
+    experience: ["Responsive Design", "Accessibility", 
+    "Performance Optimization"],
+  },
+  traits: [
+    "flexible problem solver",
+    "quick learner",
+    "data-driven thinker",
+    "collaborative team player",
+    "love traveling, as long as there's WiFi and good coffee",
+    "anime is my escapism",
+  ],
+  missionStatement:
+    "Crafting seamless web experiences one line of code at a time",
+  Status: "open_to_work && getting_coffee_regularly",
+};`;
+
+  const [typedCode, setTypedCode] = useState("");
+  useEffect(() => {
+    let i = 0;
+    setTypedCode("");
+
+    const interval = setInterval(() => {
+      i += 1;
+      setTypedCode(aboutMeCode.slice(0, i));
+      if (i >= aboutMeCode.length) clearInterval(interval);
+    }, 18);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.section
       id="home"
@@ -27,7 +63,7 @@ export const Hero = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="hero-container">
-          <div className="butterflies">
+        <div className="butterflies">
           <span className="butterfly b1">🦋</span>
           <span className="butterfly b2">🦋</span>
           <span className="butterfly b3">🦋</span>
@@ -48,11 +84,8 @@ export const Hero = () => {
           <motion.div className="hero-badge">
             <span>⋆.˚🦋༘⋆ Hi there, I'm </span>
           </motion.div>
-          <motion.h1
-            className="glitch"
-            variants={fadeInUp}
-            whileHover={{ scale: 1.02 }}
-          >
+
+          <motion.h1 className="glitch" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
             Gizy Michel
             <span className="glitch-sparkles">
               {Array.from({ length: 24 }).map((_, i) => (
@@ -60,9 +93,11 @@ export const Hero = () => {
               ))}
             </span>
           </motion.h1>
+
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             Frontend Software Developer & Designer
           </motion.h2>
+
           <motion.p className="hero-description" variants={fadeInUp}>
             I'm a 26-year-old American frontend software engineer with a strong
             passion for building modern, user-focused web interfaces. I thrive
@@ -161,7 +196,7 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="code-display">
+          <div className="code-display typing-code">
             <SyntaxHighlighter
               language="typescript"
               customStyle={{
@@ -175,26 +210,7 @@ export const Hero = () => {
               }}
               style={vscDarkPlus}
             >
-              {`const aboutMe: DeveloperProfile = {
-  codename: "GizyM", "CaffeineFueledCoder is also an acceptable title",
-  origin: "🌍 Where my brain meets code and the terminal never sleeps",
-  role: "Fullstack Web Developer",
-  focus: {
-    experience: ["Responsive Design", "Accessibility", 
-    "Performance Optimization"],
-  },
-  traits: [
-    "flexible problem solver",
-    "quick learner",
-    "data-driven thinker",
-    "collaborative team player",
-    "love traveling, as long as there's WiFi and good coffee",
-    "anime is my escapism",
-  ],
-  missionStatement:
-    "Crafting seamless web experiences one line of code at a time",
-  Status: "open_to_work && getting_coffee_regularly",
-};`}
+              {typedCode}
             </SyntaxHighlighter>
           </div>
 
@@ -205,10 +221,7 @@ export const Hero = () => {
           >
             <div className="card-content">
               <span className="card-icon">💻</span>
-              <span className="card-text">
-                {" "}
-                Currently shipping pixels and components.
-              </span>
+              <span className="card-text">Currently shipping pixels and components.</span>
             </div>
           </motion.div>
         </motion.div>
