@@ -20,6 +20,7 @@ import {
   SiFigma,
   SiJest,
   SiStripe,
+  SiFramer,
   SiTestinglibrary,
 } from "react-icons/si";
 
@@ -65,7 +66,7 @@ export const Skills = () => {
           <div className="skills-display">
             <div className="skills-grid">
               <div className="skill-item html">
-                <FaHtml5 aria-hidden="true" />
+                <FaHtml5 />
                 <span>HTML</span>
               </div>
 
@@ -109,6 +110,11 @@ export const Skills = () => {
                 <span>Firebase</span>
               </div>
 
+              <div className="skill-item cloud firestore">
+                <SiFirebase />
+                <span>Cloud Firestore</span>
+              </div>
+
               <div className="skill-item reactquery">
                 <SiReactquery />
                 <span>React Query</span>
@@ -137,6 +143,11 @@ export const Skills = () => {
               <div className="skill-item vscode">
                 <VscCode />
                 <span>VS Code</span>
+              </div>
+
+              <div className="skill-item framer-motion">
+                <SiFramer />
+                <span>Framer Motion</span>
               </div>
 
               <div className="skill-item jest">

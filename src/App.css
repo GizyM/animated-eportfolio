@@ -569,6 +569,14 @@ body {
   color: #ffca28;
 }
 
+.skill-item.cloud.firestore svg {
+  color: #ffca28;
+}
+
+.skill-item.framer-motion svg {
+  color: #0055ff;
+}
+
 .skill-item.reactquery svg {
   color: #ff4785;
 }
