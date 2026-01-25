@@ -573,6 +573,10 @@ body {
   color: #ffca28;
 }
 
+.skill-item.supabase svg {
+  color: #3ecf8e;
+}
+
 .skill-item.framer-motion svg {
   color: #0055ff;
 }

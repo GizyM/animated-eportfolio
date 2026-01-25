@@ -7,6 +7,7 @@ import {
   FaReact,
   FaGithub,
   FaGitAlt,
+  FaNodeJs,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -22,6 +23,9 @@ import {
   SiStripe,
   SiFramer,
   SiTestinglibrary,
+  SiSupabase,
+  SiChatbot,
+  SiAxios,
 } from "react-icons/si";
 
 import { VscCode } from "react-icons/vsc";
@@ -122,7 +126,7 @@ export const Skills = () => {
 
               <div className="skill-item reacthookform">
                 <SiReacthookform />
-                <span>React Hook Form</span>
+                <span>React Hook Forms</span>
               </div>
 
               <div className="skill-item vercel">
@@ -143,6 +147,51 @@ export const Skills = () => {
               <div className="skill-item vscode">
                 <VscCode />
                 <span>VS Code</span>
+              </div>
+
+              <div className="skill-item supabase">
+                <SiSupabase />
+                <span>Supabase</span>
+              </div>
+
+              <div className="skill-item api">
+                <FaHtml5 />
+                <span>API Integration</span>
+              </div>
+
+              <div className="skill-item github copilot">
+                <FaGithub />
+                <span>GitHub Copilot</span>
+              </div>
+
+              <div className="skill-item chatgpt">
+                <SiChatbot />
+                <span>ChatGPT</span>
+              </div>
+
+              <div className="skill-item dynamic">
+                <VscCode />
+                <span>Dynamic Routing</span>
+              </div>
+
+              <div className="skill-item axios">
+                <SiAxios />
+                <span>Axios</span>
+              </div>
+
+              <div className="skill-item google-analytics">
+                <SiChatbot />
+                <span>Google Analytics</span>
+              </div>
+
+              <div className="skill-item node">
+                <FaNodeJs />
+                <span>Node.js</span>
+              </div>
+
+              <div className="skill-item ux/ui">
+              <VscCode />
+              <span>UX/UI Design</span>
               </div>
 
               <div className="skill-item framer-motion">
