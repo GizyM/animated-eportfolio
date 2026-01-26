@@ -159,7 +159,7 @@ export const Skills = () => {
                 <span>API Integration</span>
               </div>
 
-              <div className="skill-item github copilot">
+              <div className="skill-item github-copilot">
                 <FaGithub />
                 <span>GitHub Copilot</span>
               </div>
@@ -189,7 +189,7 @@ export const Skills = () => {
                 <span>Node.js</span>
               </div>
 
-              <div className="skill-item ux/ui">
+              <div className="skill-item ux-ui">
               <VscCode />
               <span>UX/UI Design</span>
               </div>

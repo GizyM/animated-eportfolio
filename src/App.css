@@ -577,6 +577,34 @@ body {
   color: #3ecf8e;
 }
 
+.skill-item.api svg {
+  color: #61dafb;
+}
+
+.skill-item.chatgpt svg {
+  color: #00c853;
+}
+
+.skill-item.dynamic svg {
+  color: #0078d7;
+}
+
+.skill-item.axios svg {
+  color: #007fff;
+}
+
+.skill-item.google-analytics svg {
+  color: #4285F4;
+}
+
+.skill-item.node svg {
+  color: #339933;
+}
+
+.skill-item.ux-ui svg {
+  color: #0078d7;
+}
+
 .skill-item.framer-motion svg {
   color: #0055ff;
 }
