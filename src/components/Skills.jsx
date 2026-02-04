@@ -26,9 +26,10 @@ import {
   SiSupabase,
   SiEslint,
   SiAxios,
+  SiChatbot,
 } from "react-icons/si";
 
-import { VscJson } from "react-icons/vsc";
+import { VscJson, VscCode } from "react-icons/vsc";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
