@@ -22,7 +22,7 @@ export const Hero = () => {
   const aboutMeCode = `const aboutMe: DeveloperProfile = {
   codename: "GizyM", "CaffeineFueledCoder is also an acceptable title",
   origin: "🌍 Where my brain meets code and the terminal never sleeps",
-  role: "Fullstack Web Developer",
+  role: "Frontend Developer",
   focus: {
     experience: ["Responsive Design", "Accessibility", 
     "Performance Optimization"],
