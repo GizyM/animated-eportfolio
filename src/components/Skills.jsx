@@ -24,11 +24,11 @@ import {
   SiFramer,
   SiTestinglibrary,
   SiSupabase,
-  SiChatbot,
+  SiEslint,
   SiAxios,
 } from "react-icons/si";
 
-import { VscCode } from "react-icons/vsc";
+import { VscJson } from "react-icons/vsc";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
