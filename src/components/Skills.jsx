@@ -164,9 +164,9 @@ export const Skills = () => {
                 <span>GitHub Copilot</span>
               </div>
 
-              <div className="skill-item chatgpt">
-                <SiChatbot />
-                <span>ChatGPT</span>
+              <div className="skill-item eslint">
+                <SiEslint />
+                <span>ESLint</span>
               </div>
 
               <div className="skill-item redux">
