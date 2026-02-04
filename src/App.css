@@ -585,8 +585,8 @@ body {
   color: #00c853;
 }
 
-.skill-item.dynamic svg {
-  color: #0078d7;
+.skill-item.redux svg {
+  color: #764abc;
 }
 
 .skill-item.axios svg {

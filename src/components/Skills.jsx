@@ -169,9 +169,9 @@ export const Skills = () => {
                 <span>ChatGPT</span>
               </div>
 
-              <div className="skill-item dynamic">
-                <VscCode />
-                <span>Dynamic Routing</span>
+              <div className="skill-item redux">
+                <VscJson />
+                <span>Redux</span>
               </div>
 
               <div className="skill-item axios">
