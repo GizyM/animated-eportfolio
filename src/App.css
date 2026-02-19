@@ -504,6 +504,16 @@ body {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.skills-group {
+  margin-top: 1.5rem;
+}
+
+.skills-group-title {
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  opacity: 0.9;
+}
+
 .skill-item svg {
   font-size: 1.6rem;
   flex-shrink: 0;
@@ -533,7 +543,7 @@ body {
   color: #181717;
 }
 
-.skill-item.reacthookform svg {
+.skill-item.react-hooks svg {
   color: #ff4785;
 }
 
@@ -566,10 +576,10 @@ body {
 }
 
 .skill-item.firebase svg {
-  color: #ffca28;
+  color: orange;
 }
 
-.skill-item.cloud.firestore svg {
+.skill-item.firestore svg {
   color: #ffca28;
 }
 
@@ -579,6 +589,18 @@ body {
 
 .skill-item.api svg {
   color: #61dafb;
+}
+
+.skill-item.rest-api svg {
+  color: #61dafb;
+}
+
+.skill-item.web-apis svg {
+  color: #61dafb;
+}
+
+.skill-item.mui svg {
+  color: #007fff;
 }
 
 .skill-item.eslint svg {
@@ -609,7 +631,7 @@ body {
   color: #0055ff;
 }
 
-.skill-item.reactquery svg {
+.skill-item.styled-components svg {
   color: #ff4785;
 }
 
@@ -617,12 +639,28 @@ body {
   color: #6772e5;
 }
 
-.skill-item.testinglibrary svg {
+.skill-item.testing-library svg {
   color: #e33371;
 }
 
 .skill-item.git svg {
   color: #f1502f;
+}
+
+.skill-item.accessibility svg {
+  color: #61dafb;
+}
+
+.skill-item.performance svg {
+  color: #ff8c00;
+}
+
+.skill-item.routing svg {
+  color: #22c55e;
+}
+
+.skill-item.ai svg {
+  color: #ff61f6;
 }
 
 .skill-item span {

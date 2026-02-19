@@ -8,13 +8,18 @@ import {
   FaGithub,
   FaGitAlt,
   FaNodeJs,
+  FaUniversalAccess,
+  FaTachometerAlt,
+  FaRoute,
+  FaAccessibleIcon,
+  FaPaintBrush,
 } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
 import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
   SiFirebase,
-  SiReactquery,
   SiReacthookform,
   SiVercel,
   SiVite,
@@ -26,7 +31,10 @@ import {
   SiSupabase,
   SiEslint,
   SiAxios,
-  SiChatbot,
+  SiGoogleanalytics,
+  SiRedux,
+  SiMui,
+  SiStyledcomponents
 } from "react-icons/si";
 
 import { VscJson, VscCode } from "react-icons/vsc";
@@ -44,6 +52,83 @@ const staggerContainer = {
     },
   },
 };
+
+const skillGroups = [
+  {
+    title: "Programming Languages",
+    items: [
+      { label: "HTML", icon: <FaHtml5 />, className: "html" },
+      { label: "CSS", icon: <FaCss3Alt />, className: "css" },
+      { label: "JavaScript", icon: <FaJsSquare />, className: "js" },
+      { label: "TypeScript", icon: <SiTypescript />, className: "typescript" },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    items: [
+      { label: "React", icon: <FaReact />, className: "react" },
+      { label: "Vite", icon: <SiVite />, className: "vite" },
+      { label: "Next.js", icon: <SiNextdotjs />, className: "nextjs" },
+      { label: "Redux", icon: <SiRedux />, className: "redux" },
+      { label: "React Hooks", icon: <SiReacthookform />, className: "react-hooks" },
+      { label: "Tailwind CSS", icon: <SiTailwindcss />, className: "tailwind" },
+      {
+        label: "Styled Components",
+        icon: <SiStyledcomponents />,
+        className: "styled-components",
+      },
+      { label: "Material UI", icon: <SiMui />, className: "mui" },
+      { label: "Framer Motion", icon: <SiFramer />, className: "framer-motion" },
+    ],
+  },
+  {
+    title: "State & Data",
+    items: [
+      { label: "REST APIs", icon: <FaUniversalAccess />, className: "rest-api" },
+      { label: "Axios", icon: <SiAxios />, className: "axios" },
+      { label: "Supabase", icon: <SiSupabase />, className: "supabase" },
+      { label: "Firebase", icon: <IoLogoFirebase />, className: "firebase" },
+      { label: "Cloud Firestore", icon: <SiFirebase />, className: "firestore" },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    items: [
+      { label: "Git", icon: <FaGitAlt />, className: "git" },
+      { label: "GitHub", icon: <FaGithub />, className: "github" },
+      { label: "GitHub Actions (CI/CD)", icon: <FaGithub />, className: "github-actions" },
+      { label: "Vercel", icon: <SiVercel />, className: "vercel" },
+      { label: "Figma", icon: <SiFigma />, className: "figma" },
+      { label: "VS Code", icon: <VscCode />, className: "vscode" },
+      { label: "ESLint", icon: <SiEslint />, className: "eslint" },
+      { label: "Google Analytics", icon: <SiGoogleanalytics />, className: "google-analytics" },
+    ],
+  },
+  {
+    title: "Backend & Integration",
+    items: [
+      { label: "Node.js", icon: <FaNodeJs />, className: "node" },
+      { label: "Stripe", icon: <SiStripe />, className: "stripe" },
+      { label: "Jest", icon: <SiJest />, className: "jest" },
+      { label: "Testing Library", icon: <SiTestinglibrary />, className: "testing-library" },
+      { label: "Web APIs", icon: <FaUniversalAccess />, className: "web-apis" },
+    ],
+  },
+  {
+    title: "Other",
+    items: [
+      {
+        label: "Responsive & Accessible Web Dev",
+        icon: <FaAccessibleIcon />,
+        className: "accessibility",
+      },
+      { label: "UX/UI Design", icon: <FaPaintBrush />, className: "ux-ui" },
+      { label: "Performance Optimization", icon: <FaTachometerAlt />, className: "performance" },
+      { label: "Dynamic Route Handling", icon: <FaRoute />, className: "routing" },
+      { label: "AI Integration", icon: <VscJson />, className: "ai" },
+    ],
+  },
+];
 
 export const Skills = () => {
   return (
@@ -66,160 +151,27 @@ export const Skills = () => {
             Skills
           </motion.h2>
           <motion.p className="skills-description" variants={fadeInUp}>
-            Here are my technical skills and tools I work with.
+            Technologies, tools, and workflows I use to build modern web applications.
           </motion.p>
           <div className="skills-display">
-            <div className="skills-grid">
-              <div className="skill-item html">
-                <FaHtml5 />
-                <span>HTML</span>
-              </div>
-
-              <div className="skill-item css">
-                <FaCss3Alt />
-                <span>CSS</span>
-              </div>
-
-              <div className="skill-item js">
-                <FaJsSquare />
-                <span>JavaScript</span>
-              </div>
-
-              <div className="skill-item react">
-                <FaReact />
-                <span>React</span>
-              </div>
-
-              <div className="skill-item nextjs">
-                <SiNextdotjs />
-                <span>Next.js</span>
-              </div>
-
-              <div className="skill-item typescript">
-                <SiTypescript />
-                <span>TypeScript</span>
-              </div>
-
-              <div className="skill-item tailwind">
-                <SiTailwindcss />
-                <span>Tailwind CSS</span>
-              </div>
-
-              <div className="skill-item github">
-                <FaGithub />
-                <span>Github</span>
-              </div>
-
-              <div className="skill-item firebase">
-                <SiFirebase />
-                <span>Firebase</span>
-              </div>
-
-              <div className="skill-item cloud firestore">
-                <SiFirebase />
-                <span>Cloud Firestore</span>
-              </div>
-
-              <div className="skill-item reactquery">
-                <SiReactquery />
-                <span>React Query</span>
-              </div>
-
-              <div className="skill-item reacthookform">
-                <SiReacthookform />
-                <span>React Hook Forms</span>
-              </div>
-
-              <div className="skill-item vercel">
-                <SiVercel />
-                <span>Vercel</span>
-              </div>
-
-              <div className="skill-item vite">
-                <SiVite />
-                <span>Vite</span>
-              </div>
-
-              <div className="skill-item figma">
-                <SiFigma />
-                <span>Figma</span>
-              </div>
-
-              <div className="skill-item vscode">
-                <VscCode />
-                <span>VS Code</span>
-              </div>
-
-              <div className="skill-item supabase">
-                <SiSupabase />
-                <span>Supabase</span>
-              </div>
-
-              <div className="skill-item api">
-                <FaHtml5 />
-                <span>API Integration</span>
-              </div>
-
-              <div className="skill-item github-copilot">
-                <FaGithub />
-                <span>GitHub Copilot</span>
-              </div>
-
-              <div className="skill-item eslint">
-                <SiEslint />
-                <span>ESLint</span>
-              </div>
-
-              <div className="skill-item redux">
-                <VscJson />
-                <span>Redux</span>
-              </div>
-
-              <div className="skill-item axios">
-                <SiAxios />
-                <span>Axios</span>
-              </div>
-
-              <div className="skill-item google-analytics">
-                <SiChatbot />
-                <span>Google Analytics</span>
-              </div>
-
-              <div className="skill-item node">
-                <FaNodeJs />
-                <span>Node.js</span>
-              </div>
-
-              <div className="skill-item ux-ui">
-              <VscCode />
-              <span>UX/UI Design</span>
-              </div>
-
-              <div className="skill-item framer-motion">
-                <SiFramer />
-                <span>Framer Motion</span>
-              </div>
-
-              <div className="skill-item jest">
-                <SiJest />
-                <span>Jest</span>
-              </div>
-
-              <div className="skill-item stripe">
-                <SiStripe />
-                <span>Stripe</span>
-              </div>
-
-              <div className="skill-item testinglibrary">
-                <SiTestinglibrary />
-                <span>Testing Library</span>
-              </div>
-
-              <div className="skill-item git">
-                <FaGitAlt />
-                <span>Git</span>
-              </div>
-            </div>
+            {skillGroups.map((group) => (
+              <motion.div key={group.title} variants={fadeInUp} className="skills-group">
+                <h3 className="skills-group-title">{group.title}</h3>
+                <div className="skills-grid">
+                  {group.items.map((skill) => (
+                    <motion.div
+                    key={skill.label}
+                    className={`skill-item ${skill.className}`}
+                    whileHover={{ y: -3 }}
+                    transition={{ duration: 0.15 }}
+                    >
+                      {skill.icon}
+                      <span>{skill.label}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
